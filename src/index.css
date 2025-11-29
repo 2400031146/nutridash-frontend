@@ -1,0 +1,474 @@
+/* ============================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #111827;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   Food Diary - css
+   ============================================================ */
+
+   /* ========= FOOD DIARY PAGE ========= */
+
+/* --------- Food Diary Page Layout ---------- */
+.food-diary-page {
+  width: 100%;
+  padding: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  color: white;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.banner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.banner p {
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+
+/* --------- Main Content Layout ---------- */
+.food-diary-content {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+
+/* --------- Add Food Box ---------- */
+.add-food-box {
+  width: 330px;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.add-food-box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.add-food-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.add-food-box h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.add-btn:hover {
+  background: #000;
+}
+
+
+/* --------- Today's Meals ---------- */
+.meals-box {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.meals-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+/* --------- Meal Item ---------- */
+.meal-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.meal-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-time {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.meal-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nutrient-tags {
+  margin-top: 6px;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+
+/* --------- Meal Calories & Delete ---------- */
+.meal-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.meal-cal {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  color: #ef4444;
+  cursor: pointer;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  color: #b91c1c;
+}
+
+/* ============================================================
+   SIDEBAR – CLEAN MODERN DESIGN
+   ============================================================ */
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(6px);
+}
+
+.nav-active {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: #94a3b8;
+}
+
+.nav-active .nav-icon {
+  color: #0f172a !important;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  color: #f87171 !important;
+}
+
+.logout-btn:hover {
+  background: rgba(248, 113, 113, 0.15);
+}
+
+/* ============================================================
+   MAIN CONTENT AREA
+   ============================================================ */
+.main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* ============================================================
+   DASHBOARD (OVERVIEW) UI
+   ============================================================ */
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.big-number {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #2563eb;
+  height: 100%;
+}
+
+.nutrient {
+  margin-bottom: 20px;
+}
+
+/* == MEAL TABLE FIX == */
+.meal-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+.meal-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed; /* 👈 ensures perfect equal columns */
+}
+
+.meal-table th,
+.meal-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.meal-table th {
+  background: #f3f4f6;
+  font-weight: bold;
+}
+
+.meal-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+
+/* ============================
+   LOGIN & REGISTER PAGE CSS
+============================ */
+
+/* ============================
+   AUTH PAGES (Login + Register)
+===============================*/
+
+.auth-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+}
+
+.auth-box {
+  width: 420px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.auth-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.auth-box p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.auth-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background: #1e40af;
+}
+
+.auth-bottom-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-bottom-text a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
